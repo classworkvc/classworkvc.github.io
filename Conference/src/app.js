@@ -24,7 +24,7 @@ const io = require('socket.io')(httpsServer)
 require('./socketController')(io)
 
 
-httpsServer.listen(process.env.PORT||port, () => {
+httpsServer.listen(port, () => {
     console.log('listening on port 3012')
 })
 

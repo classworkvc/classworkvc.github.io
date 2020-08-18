@@ -4,7 +4,7 @@ const express = require('express')
 module.exports = (app) => {
 
     // redirect http traffic to https traffic
-    app.use('*', (req, res, next) => {
+    app.use('https://secure-journey-67043.herokuapp.com/', (req, res, next) => {
         if(!req.socket.encrypted){
             console.log('unsecure connection: redirecting..')
             res.redirect('https://' + req.headers.host + req.path)
